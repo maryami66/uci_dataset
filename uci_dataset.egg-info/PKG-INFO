@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: uci-dataset
-Version: 0.0.3
+Version: 0.0.4
 Summary: Read UCI dataset without the need to download any file from an external website.
 Home-page: https://github.com/maryami66/uci-dataset
 Author: Maryam Bahrami
