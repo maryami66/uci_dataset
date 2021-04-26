@@ -166,7 +166,7 @@ def load_chess():
     return df
 
 
-def load_climate_crashes(climate_crashes_uci_url):
+def load_climate_crashes():
     climate_crashes = {'name': 'Climate Model Simulation Crashes',
                        'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/00252/pop_failures.dat'}
     climate_crashes_uci_url = climate_crashes['uci_url']
@@ -268,7 +268,7 @@ def load_echocardiogram():
     return df
 
 
-def load_exasens(exasens_uci_url):
+def load_exasens():
     exasens = {'name': 'Exasens',
                'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/00523/Exasens.csv'}
     exasens_uci_url = exasens['uci_url']

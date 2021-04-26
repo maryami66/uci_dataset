@@ -5,6 +5,7 @@ requires = [
     "scikit-learn>=0.22.0",
     "numpy",
     "scipy>=1.4.1",
-    "pandas>=0.13"
+    "pandas>=0.13",
+    "xlrd >= 1.0.0"
 ]
 build-backend = "setuptools.build_meta"
