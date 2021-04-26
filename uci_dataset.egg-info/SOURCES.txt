@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+uci_dataset/__init__.py
+uci_dataset/load_data.py
+uci_dataset.egg-info/PKG-INFO
+uci_dataset.egg-info/SOURCES.txt
+uci_dataset.egg-info/dependency_links.txt
+uci_dataset.egg-info/requires.txt
+uci_dataset.egg-info/top_level.txt
