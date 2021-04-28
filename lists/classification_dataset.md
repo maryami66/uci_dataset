@@ -1,5 +1,4 @@
-
-# List of available Dataset and load function
+# Classification Dataset
 
 1. [Abalone](https://archive.ics.uci.edu/ml/datasets/Abalone): load_abalone()
 2. [Arrhythmia](https://archive.ics.uci.edu/ml/datasets/Arrhythmia): load_arrhythmia()

@@ -370,7 +370,7 @@ def load_heart_disease():
     heart_disease_uci_url = heart_disease['uci_url']
     names = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
              'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
-    df = pd.read_csv(heart_disease_uci_url, header=None, names=names)
+    df = pd.read_csv(heart_disease_uci_url, header=None, names=names, na_values=['?'])
     return df
 
 

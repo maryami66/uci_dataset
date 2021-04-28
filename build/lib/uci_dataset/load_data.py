@@ -2,6 +2,7 @@ import pandas as pd
 from io import StringIO, BytesIO, TextIOWrapper
 from zipfile import ZipFile
 import urllib
+import rarfile
 from scipy.io.arff import loadarff
 
 
@@ -163,6 +164,30 @@ def load_chess():
              'spcop','stlmt','thrsk','wkcti','wkna8','wknck','wkovl','wkpos','wtoeg',
              'class']
     df = pd.read_csv(chess_uci_url, header=None, names=names)
+    return df
+
+
+def load_chronic_kidney_disease():
+    chronic_kidney_disease = {'name': 'Chronic_Kidney_Disease',
+                              'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/00336/' +
+                                         'Chronic_Kidney_Disease.rar'}
+    chronic_kidney_disease_uci_url = chronic_kidney_disease['uci_url']
+    resp = urllib.request.urlopen(chronic_kidney_disease_uci_url)
+    r = rarfile.RarFile(BytesIO(resp.read()))
+    in_mem_fo = TextIOWrapper(r.open('Chronic_Kidney_Disease/chronic_kidney_disease_full.arff'), encoding='utf_8')
+    data = []
+    for line in in_mem_fo:
+        line = line.replace('\n', '')
+        data.append(line.split(','))
+
+    names = ['age', 'bp', 'sg', 'al', 'su', 'rbc', 'pc', 'pcc', 'ba',
+             'bgr', 'bu', 'sc', 'sod', 'pot', 'hemo', 'pcv', 'wbcc',
+             'rbcc', 'htn', 'dm', 'cad', 'appet', 'pe', 'ane',
+             'class', 'no_name']
+
+    df = pd.DataFrame(data[145:], columns=names)
+    df = df.replace({'?': None})
+    df = df.drop(['no_name'], axis=1)
     return df
 
 
@@ -338,6 +363,17 @@ def load_hcv():
     return df
 
 
+def load_heart_disease():
+    heart_disease = {'name': 'Heart Disease',
+                     'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/' +
+                     'processed.cleveland.data'}
+    heart_disease_uci_url = heart_disease['uci_url']
+    names = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
+             'exang', 'oldpeak', 'slope', 'ca', 'thal', 'target']
+    df = pd.read_csv(heart_disease_uci_url, header=None, names=names, na_values=['?'])
+    return df
+
+
 def load_hepatitis():
     hepatitis = {'name': 'Hepatitis',
                  'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/hepatitis/hepatitis.data'}
@@ -403,6 +439,27 @@ def load_parkinson():
                  'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data'}
     parkinson_uci_url = parkinson['uci_url']
     df = pd.read_csv(parkinson_uci_url)
+    return df
+
+
+def load_primary_tumor():
+    primary_tumor = {'name': 'Primary Tumor',
+                     'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/'+
+                     'primary-tumor/primary-tumor.data'}
+    primary_tumor_uci_url = primary_tumor['uci_url']
+    names = ['class', 'age', 'sex', 'histologic-type', 'degree-of-diffe', 'bone',
+             'bone-marrow', 'lung', 'pleura', 'peritoneum', 'liver', 'brain', 'skin',
+             'neck', 'supraclavicular', 'axillar', 'mediastinum', 'abdominal']
+    df = pd.read_csv(primary_tumor_uci_url, header=None, names=names, na_values=['?'])
+    return df
+
+
+def load_qsar_bioconcentration():
+    qsar_bioconcentration = {'name': 'QSAR Bioconcentration classes',
+                             'uci_url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/00510/' +
+                             'Grisoni_et_al_2016_EnvInt88.csv'}
+    qsar_bioconcentration_uci_url = qsar_bioconcentration['uci_url']
+    df = pd.read_csv(qsar_bioconcentration_uci_url, na_values=['?'])
     return df
 
 

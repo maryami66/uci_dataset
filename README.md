@@ -14,7 +14,7 @@
   <p align="center">
     A tool for loading UCI Machine Learning Repository datasets easily without need to download them.
     <br />
-    <a href="https://github.com/maryami66/uci_dataset/blob/main/List_of_Data.md"><strong>List of avaiable dataset»</strong></a>
+    <a href="https://github.com/maryami66/uci_dataset/blob/main/lists/list_of_data.md"><strong>List of avaiable dataset»</strong></a>
     <br />
     <br />
   </p>
@@ -22,7 +22,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## List of dataset
-[Here](https://github.com/maryami66/uci_dataset/blob/main/List_of_Data.md) you can find the list of dataset in the latest release
+[Here](https://github.com/maryami66/uci_dataset/blob/main/lists/list_of_data.md) you can find the list of dataset in the latest release
 along with the name of the function to load the data.
 
 
