@@ -51,6 +51,11 @@ def test_load_chess():
     print(df.shape)
 
 
+def test_load_chronic_kidney_disease():
+    df = load_chronic_kidney_disease()
+    print(df.shape)
+
+
 def test_load_climate_crashes():
     df = load_climate_crashes()
     print(df.shape)
@@ -126,6 +131,11 @@ def test_load_hcv():
     print(df.shape)
 
 
+def test_load_heart_disease():
+    df = load_heart_disease()
+    print(df.shape)
+
+
 def test_load_hepatitis():
     df = load_hepatitis()
     print(df.shape)
@@ -156,6 +166,16 @@ def test_load_parkinson():
     print(df.shape)
 
 
+def test_load_primary_tumor():
+    df = load_primary_tumor()
+    print(df.shape)
+
+
+def test_load_qsar_bioconcentration():
+    df = load_qsar_bioconcentration()
+    print(df.shape)
+
+
 def test_load_thoracic_surgery():
     df = load_thoracic_surgery()
     print(df.shape)
@@ -169,6 +189,3 @@ def test_load_thyroid_disease():
 def test_load_wilt():
     df = load_wilt()
     print(df.shape)
-
-
-

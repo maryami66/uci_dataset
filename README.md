@@ -22,7 +22,10 @@
 
 <!-- ABOUT THE PROJECT -->
 ## List of dataset
-Here you can find the list of dataset in the latest release. 
+[Here](https://github.com/maryami66/uci_dataset/List_of_Data) you can find the list of dataset in the latest release
+along with the name of the function to load the data.
+
+
 
 ### Prerequisites
 The requirements are `numpy`, `pandas`, and `scipy`
@@ -31,7 +34,7 @@ The requirements are `numpy`, `pandas`, and `scipy`
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/maryami66/uci-dataset
+   git clone https://github.com/maryami66/uci_dataset
    ```
 2. Install NPM packages
    ```sh
