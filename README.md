@@ -36,7 +36,7 @@ The requirements are `numpy`, `pandas`, and `scipy`
    ```sh
    git clone https://github.com/maryami66/uci_dataset
    ```
-2. Install NPM packages
+2. Install packages
    ```sh
    pip install uci-dataset
    ```
