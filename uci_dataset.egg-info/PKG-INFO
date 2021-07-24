@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: uci-dataset
-Version: 0.0.6
+Version: 0.0.7
 Summary: Read UCI dataset without the need to download any file from an external website.
 Home-page: https://github.com/maryami66/uci-dataset
 Author: Maryam Bahrami
@@ -22,7 +22,7 @@ Description: [![Python][python-shield]][python-url]
           <p align="center">
             A tool for loading UCI Machine Learning Repository datasets easily without need to download them.
             <br />
-            <a href="https://github.com/maryami66/uci_dataset/blob/main/List_of_Data.md"><strong>List of avaiable datasetÂ»</strong></a>
+            <a href="https://github.com/maryami66/uci_dataset/blob/main/lists/list_of_data.md"><strong>List of avaiable datasetÂ»</strong></a>
             <br />
             <br />
           </p>

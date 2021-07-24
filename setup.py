@@ -14,7 +14,7 @@ with open(path.join(current_dir, 'requirements.txt'), 'r') as f:
 
 setup(
     name='uci_dataset',
-    version='0.0.6',
+    version='0.0.7',
     author='Maryam Bahrami',
     author_email='maryami_66@yahoo.com',
     packages=['uci_dataset'],

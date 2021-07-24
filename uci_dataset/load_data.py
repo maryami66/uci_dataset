@@ -1,7 +1,7 @@
 import pandas as pd
 from io import StringIO, BytesIO, TextIOWrapper
 from zipfile import ZipFile
-import urllib
+import urllib.request
 import rarfile
 from scipy.io.arff import loadarff
 
